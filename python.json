@@ -1,0 +1,86 @@
+{
+	"name": "Python",
+
+	"scopes": {
+		"single_quote_scope": {
+			"style_class": "single-quoted",
+
+			"patterns": {
+				"'": {
+					"pop": true
+				},
+
+				"\\\\.": {
+					"style_class": "keyword"
+				}
+			}
+		},
+
+		"double_quote_scope": {
+			"style_class": "double-quoted",
+
+			"patterns": {
+				"\"": {
+					"pop": true
+				},
+
+				"\\\\.": {
+					"style_class": "keyword"
+				}
+			}
+		},
+
+		"comment_scope": {
+			"style_class": "comment",
+
+			"patterns": {
+				"\n": {
+					"pop": true
+				}
+			}
+		},
+
+		"global": {
+			"patterns": {
+				"'": {
+					"style_class": "single-quoted",
+					"push": "single_quote_scope"
+				},
+
+				"\"": {
+					"style_class": "double-quoted",
+					"push": "double_quote_scope"
+				},
+
+				"#": {
+					"style_class": "comment",
+					"push": "comment_scope"
+				},
+
+				"\\b(and|as|assert|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)\\b": {
+					"style_class": "keyword"
+				},
+
+				"\\b(True|False|None)\\b": {
+					"style_class": "keyword-value"
+				},
+
+				"\\b(self)\\b": {
+					"style_class": "primitive"
+				},
+
+				"\\b[a-zA-Z_][a-zA-Z0-9_]*\\s*(?=\\()": {
+					"style_class": "function-call"
+				},
+
+				"[0-9]+\\.?[0-9]*(?:(?:e|E)[-+]?[0-9]+)?": {
+					"style_class": "number"
+				},
+
+				"[0-9]*\\.?[0-9]+(?:(?:e|E)[-+]?[0-9]+)?": {
+					"style_class": "number"
+				}
+			}
+		}
+	}
+}
