@@ -1,5 +1,5 @@
 # About
-This repo is a collection of syntax highlighting rules files for Insight
+This repo is a collection of syntax highlighting rules files for [Insight](https://github.com/lunakoly/Insight)
 
 # How To Use
 To be able to use a syntax highlighting rules file within Insight
